@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - master
+name: Build and Publish Front End Part
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 2
+
+      - name: Instal Dependencies
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install --frozen-lockfile
+
+      - name: Build Project
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build:prod
+
+      - name: List output files
+        run: find build/ -print
+
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp.un3solka.by
+          ftp-username: ullo@un3solka.by
+          ftp-password: GKcgNC+yMQkv
+          local-dir: build
