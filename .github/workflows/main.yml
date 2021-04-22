@@ -31,4 +31,3 @@ jobs:
           ftp-server: ftp.un3solka.by
           ftp-username: ullo@un3solka.by
           ftp-password: GKcgNC+yMQkv
-          local-dir: build
