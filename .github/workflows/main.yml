@@ -1,22 +1,16 @@
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    branches: [master]
+    types: [closed]
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Branch'
-        required: true
-        default: 'master'
 name: Build and Publish Front End Part
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@${{ github.event.inputs.branch }}
-        with:
-          fetch-depth: 2
+      - name: Git Checkout
+        run: git checkout $GITHUB_REF
 
       - name: Instal Dependencies
         uses: borales/actions-yarn@v2.0.0
