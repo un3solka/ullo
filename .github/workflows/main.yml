@@ -1,5 +1,7 @@
 on:
-  push:
+  pull_request:
+    branches: [master]
+    types: [closed]
 name: Build and Publish Front End Part
 jobs:
   FTP-Deploy-Action:
@@ -24,10 +26,9 @@ jobs:
         run: find build/ -print
 
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          ftp-server: ftp.un3solka.by
-          ftp-username: ullo@un3solka.by
-          ftp-password: GKcgNC+yMQkv
-          local-dir: ./build
-          dry-run: true
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.PROD_FTP_PASSWORD }}
+          localDir: "build"
