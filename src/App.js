@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import 'fontsource-roboto';
+import RouterConfig from './navigation/RouterConfig';
+import store from './redux/store';
+import { Provider } from 'react-redux';
+import { AppWrapper } from './styled';
+import { TopBar } from './components/TopBar';
+import { TabBar } from './components/TabBar';
+import './app.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <AppWrapper>
+        <BrowserRouter>
+          <TopBar />
+          <RouterConfig />
+          <TabBar />
+        </BrowserRouter>
+      </AppWrapper>
+    </Provider>
   );
 }
 
