@@ -50,7 +50,7 @@ export const AddInfo = () => {
           console.log('Error getting documents: ', error);
         }),
     ]).then(([kitchens, types]) => {
-      const newFields = [...fields];
+      const newFields = [...initialFields];
       newFields.find((item) => item.name === 'kitchens').options = kitchens;
       newFields.find((item) => item.name === 'type').options = types;
       setFields(newFields);
