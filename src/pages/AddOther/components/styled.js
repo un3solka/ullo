@@ -17,6 +17,13 @@ export const Label = styled.span`
   width: 150px;
 `;
 
+export const Input = styled.input`
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1;
+`;
+
 export const Button = styled.button`
   padding: 5px 10px;
   border: 1px solid #ccc;

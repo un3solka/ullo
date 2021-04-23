@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Wrapper, Row, Label, Button, Message } from './components/styled';
-import { Field } from './components/Field';
+import { Field } from '../../components/Field';
 import firebase from 'firebase';
 import 'firebase/firestore';
 import 'firebase/firebase-storage';
