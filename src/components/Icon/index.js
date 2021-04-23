@@ -6,5 +6,5 @@ export const Icon = ({ icon }) => {
 };
 
 Icon.propTypes = {
-  icon: PropTypes.object,
+  icon: PropTypes.string,
 };
