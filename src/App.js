@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { AppWrapper } from './styled';
 import { TopBar } from './components/TopBar';
 import { TabBar } from './components/TabBar';
+import './services/firebase';
 import './app.css';
 
 function App() {

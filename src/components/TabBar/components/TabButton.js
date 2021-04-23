@@ -13,6 +13,6 @@ export const TabButton = ({ icon, label }) => {
 };
 
 TabButton.propTypes = {
-  icon: PropTypes.object,
+  icon: PropTypes.string,
   label: PropTypes.string,
 };
