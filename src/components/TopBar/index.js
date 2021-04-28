@@ -28,14 +28,11 @@ export const TopBarComponent = ({
     searchStart();
   };
 
-  useEffect(
-    () => {
-      if (debounceValue) {
-        doSearch(debounceValue);
-      }
-    },
-    [debounceValue, doSearch], // Only call effect if debounced search term changes
-  );
+  useEffect(() => {
+    if (debounceValue) {
+      doSearch(debounceValue);
+    }
+  }, [debounceValue, doSearch]);
   return (
     <TopBarWrapper>
       <Search

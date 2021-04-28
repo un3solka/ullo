@@ -15,7 +15,6 @@ export const doSearch = (query) => (dispatch) => {
       querySnapshot.forEach((doc) => {
         results.push({ ...doc.data(), id: doc.id });
       });
-      console.log(results);
       dispatch({
         type: CONSTANTS.SEARCH_RESPONSE,
         payload: {
