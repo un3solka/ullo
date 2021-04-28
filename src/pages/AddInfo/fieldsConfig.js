@@ -15,9 +15,14 @@ export const initialFields = [
     name: 'address',
   },
   {
-    label: 'Координаты:',
-    type: 'text',
-    name: 'location',
+    label: 'Координата (Lat):',
+    type: 'number',
+    name: 'lat',
+  },
+  {
+    label: 'Координата (Lng):',
+    type: 'number',
+    name: 'lng',
   },
   {
     label: 'Цена:',
@@ -55,5 +60,10 @@ export const initialFields = [
     label: 'Логотип:',
     type: 'file',
     name: 'logo',
+  },
+  {
+    label: 'Меню:',
+    type: 'file',
+    name: 'menu',
   },
 ];

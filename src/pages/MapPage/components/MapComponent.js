@@ -38,7 +38,7 @@ export const MapComponent = ({ mapConfig, markers }) => {
   }, []);
 
   React.useEffect(() => {
-    console.log(bounds);
+    //get bounds
   }, [bounds]);
 
   if (loadError) return 'Error';
@@ -57,8 +57,8 @@ export const MapComponent = ({ mapConfig, markers }) => {
     >
       {markers.map((marker) => (
         <Marker
-          key={`${marker.lat}-${marker.lng}`}
-          position={{ lat: marker.lat, lng: marker.lng }}
+          key={marker.id}
+          position={{ lat: marker.location.lat, lng: marker.location.lng }}
           onClick={() => {
             setSelected(marker);
           }}

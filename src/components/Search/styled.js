@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex: 1;
+`;
+
 export const SearchWrapper = styled.div`
   display: flex;
+  flex-grow: 1;
   flex-direction: row;
   background-color: #f2f2f2;
   border-radius: 8px;
@@ -33,4 +39,12 @@ export const SearchInput = styled.input`
     /* Microsoft Edge */
     color: #b8b8b8;
   }
+`;
+
+export const CancelButton = styled.button`
+  color: #fa3e05;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  margin-left: 12px;
 `;
