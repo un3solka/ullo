@@ -1,1 +1,6 @@
-export const MAP_STATE_CHANGE = 'MAP_STATE_CHANGE';
+export const MAP_GET_MARKERS = 'MAP_GET_MARKERS';
+
+export const SEARCH_START = 'SEARCH_START';
+export const SEARCH_END = 'SEARCH_END';
+export const SEARCH_REQUEST = 'SEARCH_REQUEST';
+export const SEARCH_RESPONSE = 'SEARCH_RESPONSE';

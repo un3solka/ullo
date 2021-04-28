@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TOP_BAR_HEIGHT } from '../../CONSTANTS';
 
 export const TopBarWrapper = styled.div`
   position: absolute;
@@ -9,4 +10,5 @@ export const TopBarWrapper = styled.div`
   padding: 8px 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   background-color: #fff;
+  height: ${TOP_BAR_HEIGHT}px;
 `;

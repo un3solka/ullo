@@ -13,14 +13,22 @@ export const Field = ({ type, name, onChange, value, options = [] }) => {
           type={type}
           name={name}
           onChange={onChange}
-          value={value || ''}
+          multiple={name === 'menu'}
+          value={value || (type === 'color' ? '#000000' : '')}
         />
       );
     case 'select':
       return (
-        <Select key={name} name={name} value={value || ''} onChange={onChange}>
+        <Select
+          key={name}
+          name={name}
+          value={value || ''}
+          onChange={onChange}
+          multiple={name === 'kitchens'}
+        >
+          <option value="">-- Выберите --</option>
           {options.map((option) => (
-            <option key={`${name}-${option.id}`} value={option.id}>
+            <option key={`${name}-${option.id}`} value={option.name}>
               {option.name}
             </option>
           ))}

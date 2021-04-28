@@ -3,7 +3,6 @@ import { Wrapper, Button, Message, Row } from './components/styled';
 import { Field } from '../../components/Field';
 import firebase from 'firebase';
 import 'firebase/firestore';
-import 'firebase/firebase-storage';
 import { Label } from '../AddInfo/components/styled';
 
 export const AddOther = () => {
